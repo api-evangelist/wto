@@ -1,0 +1,115 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: WTO
+providerId: wto
+publisherName: World Trade Organization
+serviceCategory: Open Government Data / Trade Statistics
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - World Trade Organization
+  - Trade Statistics
+  - Open Data
+  - FinOps
+  - FOCUS
+  - Free API
+description: >-
+  FOCUS-aligned FinOps profile for the WTO API. The WTO Timeseries and
+  Quantitative Restrictions APIs are provided free of charge as a public good.
+  There is no direct monetary cost for API consumption — organizations using
+  the WTO API should track indirect costs (engineering time, infrastructure
+  for caching and data pipelines) rather than direct API spend. Cost management
+  focuses on operational efficiency rather than spend optimization.
+sources:
+  - https://apiportal.wto.org/
+  - https://www.wto.org/
+  - https://focus.finops.org/focus-specification/v1-3/
+principles:
+  - name: Visibility
+    description: >-
+      Track API call volume and latency against the WTO portal to size caching
+      layers correctly. Monitor for 429 responses to identify batch jobs that
+      exceed the practical one-request-per-second guideline.
+  - name: Allocation
+    description: >-
+      Attribute engineering time and infrastructure costs (data pipelines,
+      storage, ETL) to the teams and products that consume WTO trade data,
+      since the API itself is zero-cost.
+  - name: Optimization
+    description: >-
+      Cache reference data (indicator lists, economy codes, classification
+      schemes) aggressively to minimize redundant calls. Use bulk parameter
+      arrays where the API supports them to reduce total request count.
+      Schedule large data pulls during off-peak hours.
+  - name: Accountability
+    description: >-
+      Data engineering and analytics teams own the WTO integration lifecycle,
+      including key rotation via apiportal.wto.org and staying current with
+      any API version deprecations communicated through the portal.
+billingModel:
+  pricingCategory: Free / Zero Cost
+  billingFrequency: N/A
+  billingCurrency: N/A
+  chargeCategories:
+    - Usage
+  chargeFrequency: None
+focusColumns:
+  ServiceName: WTO Timeseries API
+  ServiceCategory: Open Government Data / Trade Statistics
+  ProviderName: World Trade Organization
+  PublisherName: World Trade Organization
+  InvoiceIssuerName: World Trade Organization
+  PricingCategory: Free
+  PricingUnit: Request
+  BillingCurrency: N/A
+  ChargeCategory: Usage
+meters:
+  - name: api_requests
+    description: Total API requests made to WTO Timeseries and Quantitative Restrictions endpoints
+    unit: request
+    aggregation: sum
+    dimensions:
+      - endpoint
+      - indicator_group
+      - reporting_economy
+  - name: data_records_retrieved
+    description: Number of statistical data points retrieved across all queries
+    unit: record
+    aggregation: sum
+    dimensions:
+      - indicator
+      - economy
+      - time_period
+  - name: engineering_hours
+    description: Engineering time for integration, maintenance, and data pipeline operations
+    unit: hour
+    aggregation: sum
+    dimensions:
+      - team
+      - activity_type
+apis:
+  - name: WTO Timeseries API
+    baseURL: https://api.wto.org/timeseries/v1
+    serviceName: WTO Timeseries API
+    serviceCategory: Open Government Data / Trade Statistics
+  - name: WTO Quantitative Restrictions API
+    baseURL: https://api.wto.org
+    serviceName: WTO Quantitative Restrictions API
+    serviceCategory: Open Government Data / Trade Statistics
+unitEconomics:
+  - name: Cost per Request
+    metric: total_infrastructure_cost / api_requests
+    target: minimize via caching
+  - name: Engineering Cost per Data Point
+    metric: engineering_hours_cost / data_records_retrieved
+    target: minimize via bulk queries and automation
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

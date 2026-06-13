@@ -1,0 +1,107 @@
+aid: wto
+name: WTO
+description: >-
+  The World Trade Organization (WTO) provides a REST API for programmatic access
+  to global trade statistics, tariff data, trade flows, quantitative restrictions,
+  dispute settlement records, and trade policy notifications. The flagship Timeseries
+  API covers merchandise trade and services statistics (annual, quarterly, monthly),
+  market access indicators including bound, applied, and preferential tariffs, non-tariff
+  measures, and other WTO-related indicators. API access requires a free API key obtained
+  from the WTO API Developer Portal at apiportal.wto.org.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/wto/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - World Trade
+  - Trade Statistics
+  - Tariffs
+  - Trade Flows
+  - Trade Policy
+  - International Trade
+  - Global Trade
+  - Merchandise Trade
+  - Services Trade
+  - Market Access
+  - Non-Tariff Measures
+  - Quantitative Restrictions
+  - Dispute Settlement
+  - Trade Notifications
+  - Open Data
+apis:
+  - aid: wto:timeseries
+    name: WTO Timeseries API
+    description: >-
+      The WTO flagship API providing programmatic access to a large number of
+      statistical indicators related to WTO issues. Data covers merchandise trade
+      and trade in services statistics (annual, quarterly, and monthly), market
+      access indicators (bound, applied, and preferential tariffs), non-tariff
+      information, and other indicators. Authentication requires a free API key
+      obtained from the WTO API Developer Portal.
+    humanURL: https://apiportal.wto.org/
+    baseURL: https://api.wto.org/timeseries/v1
+    tags:
+      - Timeseries
+      - Trade Statistics
+      - Tariffs
+      - Merchandise Trade
+      - Services Trade
+      - Market Access
+    properties:
+      - type: Documentation
+        url: https://apiportal.wto.org/apis
+      - type: Portal
+        url: https://apiportal.wto.org/
+      - type: Authentication
+        url: https://apiportal.wto.org/signup
+      - type: Interactive
+        url: https://apiportal.wto.org/api-details
+
+  - aid: wto:quantitative-restrictions
+    name: WTO Quantitative Restrictions API
+    description: >-
+      Provides programmatic access to WTO quantitative restrictions data, including
+      member notifications, product-level restrictions, and QR listings. Enables
+      retrieval of trade measure data by member economy and product classification.
+      Authentication requires a free API key from the WTO API Developer Portal.
+    humanURL: https://apiportal.wto.org/
+    baseURL: https://api.wto.org
+    tags:
+      - Quantitative Restrictions
+      - Non-Tariff Measures
+      - Trade Policy
+      - Notifications
+    properties:
+      - type: Documentation
+        url: https://apiportal.wto.org/apis
+      - type: Portal
+        url: https://apiportal.wto.org/
+
+common:
+  - type: Website
+    url: https://www.wto.org/
+  - type: Documentation
+    url: https://apiportal.wto.org/apis
+  - type: GitHubOrg
+    url: https://github.com/wto
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/world-trade-organization/
+  - type: Blog
+    url: https://www.wto.org/english/news_e/news_e.htm
+  - type: Pricing
+    url: https://apiportal.wto.org/products
+  - type: StatusPage
+    url: https://apiportal.wto.org/
+  - type: X
+    url: https://twitter.com/WTO
+  - type: Plans
+    url: plans/wto-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/wto-rate-limits.yml
+  - type: FinOps
+    url: finops/wto-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

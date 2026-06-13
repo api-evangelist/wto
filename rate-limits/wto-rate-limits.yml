@@ -1,0 +1,67 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: WTO
+providerId: wto
+created: '2026-06-13'
+modified: '2026-06-13'
+tags:
+  - World Trade Organization
+  - Trade Statistics
+  - Tariffs
+  - Open Data
+  - Rate Limiting
+description: >-
+  Rate limit profile for the WTO API Developer Portal (apiportal.wto.org).
+  The WTO does not publish explicit rate limit headers or documented thresholds.
+  Community R client documentation notes a practical guideline of no more than
+  one request per second to avoid throttling. The API is free and requires a
+  subscription key obtained via the portal registration flow.
+notes: >-
+  WTO has not published formal rate limit figures. The one-request-per-second
+  guideline is derived from community client documentation (wtor R package).
+  Replace with official limits if WTO publishes them.
+sources:
+  - https://apiportal.wto.org/
+  - https://github.com/fabiansalazares/wtor
+responseCodes:
+  throttled: 429
+  serviceUnavailable: 503
+limits:
+  - tier: free
+    name: Free Tier Sustained Rate
+    scope: api-key
+    metric: requests_per_second
+    limit: 1
+    burst: 5
+    timeFrame: second
+    applies:
+      - WTO Timeseries API
+      - WTO Quantitative Restrictions API
+  - tier: free
+    name: Free Tier Practical Daily Guideline
+    scope: api-key
+    metric: requests_per_day
+    limit: 10000
+    timeFrame: day
+    notes: Estimated reasonable daily usage ceiling; no official figure published.
+    applies:
+      - WTO Timeseries API
+      - WTO Quantitative Restrictions API
+policies:
+  - name: Backoff Strategy
+    description: >-
+      Clients should implement exponential backoff with jitter when receiving
+      429 responses. Honor any Retry-After header if present.
+  - name: Sequential Requests
+    description: >-
+      Community guidance recommends issuing no more than one request per second
+      when making bulk or batch queries against the Timeseries API.
+  - name: API Key Required
+    description: >-
+      All requests must include a valid subscription key (Ocp-Apim-Subscription-Key
+      or equivalent header) obtained from apiportal.wto.org. Keyless requests
+      are not supported.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

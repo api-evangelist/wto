@@ -1,0 +1,38 @@
+name: WTO API Plans and Pricing
+description: >-
+  WTO API access is free for all registered users. There are no paid tiers or
+  commercial subscription plans. Developers sign up for a free API key at
+  apiportal.wto.org to access the Timeseries API and other WTO data APIs.
+  The API is provided as a public good by the World Trade Organization to
+  facilitate open access to global trade statistics and policy data.
+specificationVersion: '0.1'
+url: https://apiportal.wto.org/products
+plans:
+  - name: Free (Public)
+    description: >-
+      Default and only tier for all registered WTO API users. Provides full
+      access to the Timeseries API covering merchandise trade statistics,
+      services trade data, tariff indicators (bound, applied, preferential),
+      non-tariff measures, and the Quantitative Restrictions API. Registration
+      requires only a valid email address to obtain an API key.
+    url: https://apiportal.wto.org/signup
+    price: Free
+    pricingModel: free
+    rateLimits:
+      - type: REST
+        description: Practical guideline from community clients — avoid more than one query per second to prevent throttling.
+        requests: 1
+        period: 1s
+        scope: per-api-key
+    features:
+      - Full access to WTO Timeseries API
+      - Merchandise trade and services statistics (annual, quarterly, monthly)
+      - Market access indicators (bound, applied, and preferential tariffs)
+      - Non-tariff measures and related indicators
+      - Quantitative Restrictions API (member, notification, product, QR list endpoints)
+      - Interactive API Console at apiportal.wto.org
+      - Automatically generated API documentation
+      - Email support via statistics@wto.org
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
