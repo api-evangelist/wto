@@ -80,6 +80,8 @@ apis:
         url: https://apiportal.wto.org/
 
 common:
+  - type: DomainSecurity
+    url: security/wto-domain-security.yml
   - type: Website
     url: https://www.wto.org/
   - type: Documentation
