@@ -55,6 +55,13 @@ apis:
     humanURL: https://apiportal.wto.org/
     baseURL: https://api.wto.org/timeseries/v1
     tags:
+      - Time Series
+      - Trade Statistics
+      - Tariffs
+      - Merchandise Trade
+      - Services Trade
+      - Market Access
+    tags_raw:
       - Timeseries
       - Trade Statistics
       - Tariffs
@@ -81,6 +88,11 @@ apis:
     humanURL: https://apiportal.wto.org/
     baseURL: https://api.wto.org
     tags:
+      - Quantitative Restrictions
+      - Non-Tariff Measures
+      - Trade Policy
+      - Notification
+    tags_raw:
       - Quantitative Restrictions
       - Non-Tariff Measures
       - Trade Policy
