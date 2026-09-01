@@ -66,7 +66,7 @@ apis:
     humanURL: https://apiportal.wto.org/
     baseURL: https://api.wto.org/timeseries/v1
     tags:
-      - Timeseries
+      - Time Series
       - Trade Statistics
       - Tariffs
       - Merchandise Trade
