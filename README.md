@@ -1,4 +1,4 @@
-# WTO (wto)
+# WTO
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,94 +66,104 @@
 
 The World Trade Organization (WTO) provides a REST API for programmatic access to global trade statistics, tariff data, trade flows, quantitative restrictions, dispute settlement records, and trade policy notifications. The flagship Timeseries API covers merchandise trade and services statistics (annual, quarterly, monthly), market access indicators including bound, applied, and preferential tariffs, non-tariff measures, and other WTO-related indicators. API access requires a free API key obtained from the WTO API Developer Portal at apiportal.wto.org.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/wto/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/wto/refs/heads/main/apis.yml)
+**Areas:** World Trade · Trade Statistics · Tariffs · Trade Flows · Trade Policy · International Trade · Global Trade · Merchandise Trade · Services Trade · Market Access · Non-Tariff Measures · Quantitative Restrictions
 
-## Scope
+## WTO on APIs.io
 
-- **Type:** Index
+Everything profiled for WTO is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/wto/](https://apis.io/providers/wto/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- World Trade
-- Trade Statistics
-- Tariffs
-- Trade Flows
-- Trade Policy
-- International Trade
-- Global Trade
-- Merchandise Trade
-- Services Trade
-- Market Access
-- Non-Tariff Measures
-- Quantitative Restrictions
-- Dispute Settlement
-- Trade Notifications
-- Open Data
+- [WTO Timeseries API](https://apis.io/apis/wto/timeseries/) — The WTO flagship API providing programmatic access to a large number of statistical indicators related to WTO issues. Data covers merchandise trade and…
+- [WTO Quantitative Restrictions API](https://apis.io/apis/wto/quantitative-restrictions/) — Provides programmatic access to WTO quantitative restrictions data, including member notifications, product-level restrictions, and QR listings. Enables…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-### WTO Timeseries API
+Authentication, trust centre, and vulnerability disclosure.
 
-The WTO flagship API providing programmatic access to a large number of statistical indicators related to WTO issues. Data covers merchandise trade and trade in services statistics (annual, quarterly, and monthly), market access indicators (bound, applied, and preferential tariffs), non-tariff information, and other indicators. Authentication requires a free API key obtained from the WTO API Developer Portal.
+- [Wto Domain Security](https://apis.io/security/wto/wto-domain-security/)
 
-- **Human URL:** [https://apiportal.wto.org/](https://apiportal.wto.org/)
-- **Base URL:** `https://api.wto.org/timeseries/v1`
+#### Plans and pricing (1)
 
-#### Tags
+Published plans, tiers and prices.
 
-- Timeseries
-- Trade Statistics
-- Tariffs
-- Merchandise Trade
-- Services Trade
-- Market Access
+- [Wto Plans Pricing](https://apis.io/plans/wto/wto-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://apiportal.wto.org/apis)
-- [Portal](https://apiportal.wto.org/)
-- [Authentication](https://apiportal.wto.org/signup)
-- [Interactive](https://apiportal.wto.org/api-details)
+Published request limits.
 
-### WTO Quantitative Restrictions API
+- [Wto Rate Limits](https://apis.io/rate-limits/wto/wto-rate-limits/)
 
-Provides programmatic access to WTO quantitative restrictions data, including member notifications, product-level restrictions, and QR listings. Enables retrieval of trade measure data by member economy and product classification. Authentication requires a free API key from the WTO API Developer Portal.
+#### FinOps (1)
 
-- **Human URL:** [https://apiportal.wto.org/](https://apiportal.wto.org/)
-- **Base URL:** `https://api.wto.org`
+What the API costs to run, by operation.
 
-#### Tags
+- [Wto Finops](https://apis.io/finops/wto/wto-finops/)
 
-- Quantitative Restrictions
-- Non-Tariff Measures
-- Trade Policy
-- Notifications
+## Where to find this API
 
-#### Properties
-
-- [Documentation](https://apiportal.wto.org/apis)
-- [Portal](https://apiportal.wto.org/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.wto.org/)
 - [Documentation](https://apiportal.wto.org/apis)
-- [Git Hub Org](https://github.com/wto)
-- [LinkedIn](https://www.linkedin.com/company/world-trade-organization/)
-- [Blog](https://www.wto.org/english/news_e/news_e.htm)
 - [Pricing](https://apiportal.wto.org/products)
-- [Status Page](https://apiportal.wto.org/)
-- [X (Twitter)](https://twitter.com/WTO)
-- [Plans](plans/wto-plans-pricing.yml)
-- [Rate Limits](rate-limits/wto-rate-limits.yml)
-- [Fin Ops](finops/wto-finops.yml)
+- [Blog](https://www.wto.org/english/news_e/news_e.htm)
+- [Status](https://apiportal.wto.org/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 19.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 15.8 |
+
+**Agent readiness 3.1** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/wto/](https://apis.io/providers/wto/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for WTO: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/wto/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
